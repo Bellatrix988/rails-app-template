@@ -1,4 +1,5 @@
 --database=postgresql
+--css=bootstrap
 --skip-action-cable
 --skip-action-mailer
 --skip-bundle
@@ -6,3 +7,4 @@
 --skip-keeps
 --skip-spring
 --skip-test
+--template='https://raw.githubusercontent.com/Bellatrix988/rails-template/main/template.rb'
