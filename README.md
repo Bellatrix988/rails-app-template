@@ -26,7 +26,7 @@ directory.
 
 ```shell
 cd $HOME
-curl https://raw.githubusercontent.com/Bellatrix988/rails-app-template/main/.railsrc --output .railsrc
+curl https://raw.githubusercontent.com/Bellatrix988/rails-template/main/.railsrc --output .railsrc
 ```
 
 ## For a new project
