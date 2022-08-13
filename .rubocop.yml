@@ -1,0 +1,25 @@
+require:
+  - rubocop-rails
+
+#-- Overrides --------------------------------------------------------------------------------------
+
+Layout/LineLength:
+  Max: 120
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+Metrics/MethodLength:
+  CountComments: false
+  Max: 20
+
+#-- Disabled ---------------------------------------------------------------------------------------
+
+Style/Documentation:
+  Enabled: false
+
+#-- Exceptions -------------------------------------------------------------------------------------
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*'
