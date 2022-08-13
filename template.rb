@@ -1,5 +1,6 @@
+add_template_repository_to_source_path
+
 # Gemfile
-source_paths.unshift(File.dirname(__FILE__))
 template "Gemfile.tt", 'Gemfile', force: true
 
 # Annotate gems in Gemfile an installing gems via bundle
