@@ -6,7 +6,7 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     email { Faker::Internet.email(name: first_name + last_name, separators: '+', domain: 'example') }
     password { 'password' }
-    confirmed_at { DateTime.now }
+    # confirmed_at { DateTime.now }
     role { :user }
   end
 

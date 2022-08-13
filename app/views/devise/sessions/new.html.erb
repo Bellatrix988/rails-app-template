@@ -1,0 +1,13 @@
+<main class="form-wrap-md w-100 m-auto mt-5">
+  <%= brand_logo_lg(centered: true) %>
+  <h2 class="fw-normal text-center"><%= t(:'.title') %></h2>
+
+  <%= simple_form_for(resource, url: user_session_path) do |f| %>
+    <%= f.input :email, required: false, autofocus: true, input_html: { autocomplete: "email" } %>
+    <%= f.input :password, required: false, input_html: { autocomplete: "current-password" } %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= f.button :submit, t(:'.submit') %>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</main>

@@ -1,0 +1,20 @@
+<% klass = devise_controller? ? 'body-wrap' : '' %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= I18n.t('title') %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script>window.process = { env: {} }</script>
+  </head>
+    <body class="<%= klass %>">
+      <%= render 'shared/header' unless devise_controller? %>
+      <main class="container">
+        <%= render 'shared/flashes' unless devise_controller? %>
+        <%= yield %>
+      </main>
+    </body>
+</html>

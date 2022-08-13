@@ -1,0 +1,20 @@
+en:
+  title: <%= config[:name] %>
+  header:
+    home: Home
+    admin_link: Admin Panel
+    sign_in: Sign in
+    sign_up: Sign up
+    log_out: Logout
+    user_menu:
+      new_project: New project...
+      settings: Settings
+      profile: Profile
+  helpers:
+    submit:
+      create: 'Awesome create button'
+      update: 'Update'
+  dashboard:
+    index:
+      content: Welcome to Dashboard!
+      sign_in_content: You have already Signed In!

@@ -84,9 +84,6 @@ group :development do
   # gem "rack-mini-profiler"
 
 <%- end -%>
-  # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
-  gem 'web-console'
-
   # Pretty print Ruby objects with proper indentation and colors (https://github.com/awesome-print/awesome_print)
   gem 'awesome_print'
 
@@ -121,8 +118,10 @@ end
 group :test do
   # Strategies for cleaning databases. Can be used to ensure a clean slate for testing. (https://github.com/DatabaseCleaner/database_cleaner)
   gem 'database_cleaner'
+
   # Making tests easy on the fingers and eyes (http://thoughtbot.com/community/)
   gem 'shoulda-matchers', '~> 3.1'
+
   # Code coverage for Ruby (https://github.com/simplecov-ruby/simplecov)
   gem 'simplecov', require: false
 end
