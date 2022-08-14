@@ -34,6 +34,12 @@ curl https://raw.githubusercontent.com/Bellatrix988/rails-template/main/.railsrc
 Simple user standard command for creation new application.
 `rails new app_name`
 ## For an existing project
+For convenient merge two versions of conviction files, I'm using [rubymine diff tool](https://www.jetbrains.com/help/ruby/command-line-differences-viewer.html#353bb678).
+
+To use it, in RubyMine, install the CLI by selecting `Tools - Create Command-line Launcher in the menu`.
+`export THOR_MERGE="mine diff $1 $2"`
+
+Next I'm 
 ```shell
 bin/rails app:template LOCATION=https://raw.githubusercontent.com/Bellatrix988/rails-template/main/template.rb
 
