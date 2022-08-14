@@ -1,4 +1,4 @@
-# Rails Application Template
+# Rails Application Template with Bootstrap
 
 These files contains the most usable gems and configuration for the initial setup
 of a plain Rails-application.
@@ -18,6 +18,7 @@ To find more suitable gem for special case I like using [The Ruby Toolbox](https
 
 * PostgreSQL
 * Rails 7
+* Ruby 3.1.2
 
 ## Usage
 
@@ -38,11 +39,19 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/Bellatrix988/r
 
 ```
 ## List of Gems
-
-* Annotation
+* [Devise](https://github.com/heartcombo/devise)
+* [Enumerize](https://github.com/brainspec/enumerize)
+* 
+* Frontend
+  * [Simple Form](https://github.com/heartcombo/simple_form)
+* Unils
+  * [Rubocop](https://github.com/rubocop/rubocop)  
   * [Annotate gem](https://github.com/ivantsepp/annotate_gem) - is command line tool that will add useful comments to your Gemfile.
 * Testing
   * [Rspec-rails](https://github.com/rspec/rspec-rails)
+  * [FactoryBot](https://github.com/thoughtbot/factory_bot)
+  * [Faker](https://github.com/faker-ruby/faker)
+  * [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner)
 
 
 

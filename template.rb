@@ -17,6 +17,12 @@ def add_template_repository_to_source_path
   end
 end
 
+def gemfile_requirement(name)
+  @original_gemfile ||= IO.read("Gemfile")
+  req = @original_gemfile[/gem\s+['"]#{name}['"]\s*(,[><~= \t\d\.\w'"]*)?.*$/, 1]
+  req && req.gsub("'", %(")).strip.sub(/^,\s*"/, ', "')
+end
+
 def db_setup
   rails_command('db:create')
   rails_command('db:migrate')
@@ -25,12 +31,12 @@ end
 
 def init_gems
   # Gemfile
-  template "Gemfile.tt", 'Gemfile', force: true
+  template "Gemfile.tt", 'Gemfile'
 
   # Annotate gems in Gemfile an installing gems via bundle
+  run 'bundle install'
   run 'gem install annotate_gem'
   run 'annotate-gem --new-comments-only'
-  run 'bundle install'
 
   # Initial generation for gems
   generate 'simple_form:install --bootstrap'
